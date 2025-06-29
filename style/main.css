@@ -1,0 +1,272 @@
+:root {
+    --light-green: #A8E6CF;
+    --teal: #1A3C34;
+    --white: #FFFFFF;
+    --dark-gray: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-gray);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: var(--white);
+    max-width: 1320px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: var(--teal);
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--teal);
+}
+
+
+.logo i {
+    color: var(--light-green);
+    margin-right: 10px;
+}
+
+.tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--teal);
+    position: relative;
+}
+
+.tagline::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--light-green);
+    margin-top: 5px;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+#hero {
+    background: linear-gradient(to bottom, var(--light-green), var(--white));
+    padding: 100px 50px;
+    animation-delay: 0s;
+}
+
+#hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: var(--teal);
+    margin-bottom: 20px;
+}
+
+#hero h1 i {
+    color: var(--light-green);
+    margin-right: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#recruitment {
+    animation-delay: 0.5s;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: var(--teal);
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background: var(--light-green);
+    padding: 0 5px;
+}
+
+ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+ul li::before {
+    content: '•';
+    color: var(--light-green);
+    margin-right: 10px;
+}
+
+#why-join {
+    animation-delay: 1s;
+}
+
+#why-join p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+#why-join i {
+    color: var(--light-green);
+    margin-right: 10px;
+}
+
+#details {
+    animation-delay: 1.5s;
+}
+
+#details p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+#details i {
+    color: var(--teal);
+    margin-right: 10px;
+}
+
+#cta {
+    animation-delay: 2s;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--light-green);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #7FBCAA;
+}
+
+#cta p a {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 2px solid var(--light-green);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--teal);
+    position: relative;
+}
+
+footer::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: var(--light-green);
+    margin: 5px auto 0;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .tagline {
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    #hero {
+        padding: 80px 20px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    #hero h1 {
+        font-size: 1.7rem;
+    }
+
+    #hero p {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}

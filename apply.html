@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply to Zenthira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style/main.css">
+<link rel="stylesheet" href="style/apply.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="/"><i class="fas fa-leaf"></i>Zenthira</a></div>
+        <div class="tagline">BUILT FOR THE FUTURE</div>
+    </header>
+
+    <main>
+        <section id="apply-form">
+            <h2>Apply to Join Zenthira</h2>
+            <p>Please fill out the form below to apply for a position at Zenthira.</p>
+
+            <!-- novalidate disables the browser's own validation UI -->
+            <form id="applicationForm" novalidate>
+                <label for="name">
+                    <i class="fas fa-user"></i> Name: <span class="required">*</span>
+                </label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" />
+                <span id="nameError" class="error"></span>
+
+                <label for="email">
+                    <i class="fas fa-envelope"></i> Email: <span class="required">*</span>
+                </label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" />
+                <span id="emailError" class="error"></span>
+
+                <label for="comments">
+                    <i class="fas fa-comment"></i> Additional Comments:
+                </label>
+                <textarea id="comments" name="comments"
+                    placeholder="Any additional information or cover letter"></textarea>
+
+                <p>
+                    Please note that after submitting this form, your email client will open.
+                    You will need to attach your CV manually to the email before sending.
+                </p>
+
+                <button type="submit" id="submitBtn" class="btn">Submit Application</button>
+            </form>
+
+          
+        </section>
+    </main>
+
+    <footer>
+        Zenthira – Driven by Sustainability, Powered by Innovation
+    </footer>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
