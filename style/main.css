@@ -1,8 +1,10 @@
 :root {
-    --light-green: #A8E6CF;
-    --teal: #1A3C34;
+    --primary-purple: #6B3FA0;
+    --primary-cyan: #00C4FF;
+    --primary-orange: #FF5733;
     --white: #FFFFFF;
     --dark-gray: #333333;
+    --error-red: #FF0000;
 }
 
 * {
@@ -24,16 +26,40 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 header {
+    .logo {
+        img {
+            width: 75px;
+            height: 75px;
+            opacity: 0.75;
+            border-radius: 50%;
+            transition: 0.1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        }
+        img:hover {
+            scale: 1.1;
+           opacity: 1;
+            border-radius: 25%;
+        }
+    }
+
+    padding: 20px 50px;
+    background: linear-gradient(to right, var(--primary-purple), var(--primary-cyan));
+
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background: var(--white);
     max-width: 1320px;
     margin: auto;
 }
@@ -43,24 +69,23 @@ header {
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
-    color: var(--teal);
+    color: var(--white);
 }
 
 .logo a {
     text-decoration: none;
-    color: var(--teal);
+    color: var(--white);
 }
 
-
 .logo i {
-    color: var(--light-green);
+    color: var(--primary-orange);
     margin-right: 10px;
 }
 
 .tagline {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    color: var(--teal);
+    color: var(--white);
     position: relative;
 }
 
@@ -69,7 +94,7 @@ header {
     display: block;
     width: 50px;
     height: 2px;
-    background: var(--light-green);
+    background: var(--primary-orange);
     margin-top: 5px;
 }
 
@@ -79,7 +104,7 @@ section {
 }
 
 #hero {
-    background: linear-gradient(to bottom, var(--light-green), var(--white));
+    background: linear-gradient(to bottom, var(--primary-cyan), var(--white));
     padding: 100px 50px;
     animation-delay: 0s;
 }
@@ -87,12 +112,12 @@ section {
 #hero h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
-    color: var(--teal);
+    color: var(--primary-purple);
     margin-bottom: 20px;
 }
 
 #hero h1 i {
-    color: var(--light-green);
+    color: var(--primary-orange);
     margin-right: 10px;
 }
 
@@ -109,13 +134,14 @@ section {
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
-    color: var(--teal);
+    color: var(--primary-purple);
     margin-bottom: 20px;
 }
 
 .highlight {
-    background: var(--light-green);
+    background: var(--primary-cyan);
     padding: 0 5px;
+    color: var(--white);
 }
 
 ul {
@@ -130,7 +156,7 @@ ul li {
 
 ul li::before {
     content: '•';
-    color: var(--light-green);
+    color: var(--primary-orange);
     margin-right: 10px;
 }
 
@@ -144,7 +170,7 @@ ul li::before {
 }
 
 #why-join i {
-    color: var(--light-green);
+    color: var(--primary-orange);
     margin-right: 10px;
 }
 
@@ -158,7 +184,7 @@ ul li::before {
 }
 
 #details i {
-    color: var(--teal);
+    color: var(--primary-orange);
     margin-right: 10px;
 }
 
@@ -168,7 +194,7 @@ ul li::before {
 
 .btn {
     display: inline-block;
-    background: var(--light-green);
+    background: var(--primary-cyan);
     color: var(--white);
     padding: 15px 30px;
     border-radius: 5px;
@@ -180,13 +206,13 @@ ul li::before {
 }
 
 .btn:hover {
-    background: #7FBCAA;
+    background: var(--primary-purple);
 }
 
 #cta p a {
-    color: var(--teal);
+    color: var(--primary-purple);
     text-decoration: none;
-    border-bottom: 2px solid var(--light-green);
+    border-bottom: 2px solid var(--primary-orange);
 }
 
 footer {
@@ -194,7 +220,7 @@ footer {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    color: var(--teal);
+    color: var(--primary-purple);
     position: relative;
 }
 
@@ -203,10 +229,9 @@ footer::after {
     display: block;
     width: 100px;
     height: 2px;
-    background: var(--light-green);
+    background: var(--primary-orange);
     margin: 5px auto 0;
 }
-
 
 @media (max-width: 768px) {
     header {
