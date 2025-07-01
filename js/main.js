@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 `Name: ${nameInput.value}\nEmail: ${emailInput.value}\nComments: ${commentsInput.value}\n\n(Please attach your CV manually)`
             );
             const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=careers@zenthira.com&su=${subject}&body=${body}`;
-
+            const mailtoUrl = `mailto:careers@zenthira.com?subject=${subject}&body=${body}`;
             // Redirect based on device
             if (isMobileOrTablet()) {
-                window.location.href = gmailUrl; // Open in same tab
+                window.location.href = mailtoUrl; // Open in same tab
             } else {
                 window.open(gmailUrl, '_blank'); // Open in new tab
             }
